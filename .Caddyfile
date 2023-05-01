@@ -1,0 +1,3 @@
+sub.main.dot {
+    reverse_proxy IP_TO_CHANGE:8080
+}
