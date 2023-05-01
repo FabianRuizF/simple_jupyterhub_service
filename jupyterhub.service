@@ -1,0 +1,13 @@
+[Unit]
+Description=JupyterHub
+After=syslog.target network.target
+
+[Service]
+User=root
+Restart=always
+RestartSec=10
+WorkingDirectory=/root/jupyterhub_workdir
+ExecStart=/usr/local/bin/jupyterhub --ip 0.0.0.0 --port 8080
+
+[Install]
+WantedBy=multi-user.target
